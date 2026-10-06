@@ -80,6 +80,9 @@ a { text-decoration: none; color: inherit; }
 .logo-text { line-height: 1.1; }
 .logo-text strong { display: block; font-family: 'Oswald', sans-serif; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.1em; color: #fff; }
 .logo-text span { display: block; font-size: 0.64rem; letter-spacing: 0.2em; color: #d8cfc5; font-weight: 600; text-transform: uppercase; }
+.logo { flex-shrink: 0; }
+.logo-text span { white-space: nowrap; }
+@media (min-width: 769px) and (max-width: 1080px) { .navbar .nav-links a:not(.nav-cta) { padding-left: 10px; padding-right: 10px; } }
 @media (max-width: 480px) { .logo img { height: 48px; width: 48px; } .logo-text strong { font-size: 1.15rem; } .logo-text span { font-size: 0.56rem; letter-spacing: 0.14em; } }
 
 .nav-links { display: flex; gap: 0; align-items: center; }
