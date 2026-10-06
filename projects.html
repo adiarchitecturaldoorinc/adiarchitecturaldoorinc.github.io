@@ -471,7 +471,8 @@ document.getElementById('mobileToggle').addEventListener('click', () => { docume
     var b = items[idx];
     img.src = b.getAttribute('data-full');
     img.alt = b.getAttribute('data-caption');
-    cap.textContent = b.closest('.project').querySelector('h2').textContent + ' \u2014 ' + b.getAttribute('data-caption');
+    var name = b.closest('.project').querySelector('h2').textContent, c = b.getAttribute('data-caption');
+    cap.textContent = c.indexOf(name) === 0 ? c : name + ' \u2014 ' + c;
   }
   function open(i) { lastFocus = document.activeElement; show(i); box.hidden = false; document.body.style.overflow = 'hidden'; box.querySelector('.lb-close').focus(); }
   function close() { box.hidden = true; img.src = ''; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
