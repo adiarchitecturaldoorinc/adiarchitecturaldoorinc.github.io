@@ -239,6 +239,20 @@ a { text-decoration: none; color: inherit; }
   animation: fadeInUp 0.8s 0.15s both;
 }
 .hero h1 .accent { color: var(--red); }
+.hero-sub {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: -6px 0 18px;
+  animation: fadeInUp 0.8s 0.22s both;
+}
+.hero-sub::before { content: ''; width: 40px; height: 3px; background: var(--red); flex: none; }
 .hero p {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -1103,6 +1117,7 @@ a.location-detail:hover { color: #fff; }
   .nav-links.active a { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.04); }
   .hero { min-height: 75vh; }
   .hero h1 { font-size: 2.4rem; }
+  .hero-sub { justify-content: center; }
   .hero-inner { flex-direction: column-reverse; text-align: center; gap: 40px; }
   .hero-logo-showcase img { height: 340px; }
   .hero-btns { justify-content: center; }
@@ -1177,8 +1192,9 @@ a.location-detail:hover { color: #fff; }
   <div class="container">
     <div class="hero-inner">
       <div class="hero-content">
-        <h1>Complete <span class="accent">Commercial Door And Hardware</span> Solutions You Can Trust</h1>
-        <p>From high-security access control to precision-engineered door hardware — ADI Architectural Door Inc. delivers expert solutions for every commercial project, nationwide.</p>
+        <h1>Suppliers of <span class="accent">Doors and Hardware</span></h1>
+        <div class="hero-sub">Architect Approved Schedules</div>
+        <p>Experienced working with Premier Construction Managers and International Developers.</p>
         <div class="hero-btns">
           <a href="#services" class="btn btn-primary">
             Explore Services
