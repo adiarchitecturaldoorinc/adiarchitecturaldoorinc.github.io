@@ -218,33 +218,6 @@ a { text-decoration: none; color: inherit; }
 }
 .career-hero .container { position: relative; z-index: 2; }
 .career-hero-inner { text-align: center; max-width: 800px; margin: 0 auto; }
-.career-hero .hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(196,30,42,0.15);
-  border: 1px solid rgba(196,30,42,0.3);
-  padding: 8px 20px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--red-light);
-  margin-bottom: 28px;
-  animation: fadeInUp 0.8s both;
-}
-.career-hero .hero-badge::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: var(--red);
-  border-radius: 50%;
-  animation: pulse-dot 2s infinite;
-}
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
 .career-hero h1 {
   font-size: clamp(2.5rem, 5vw, 3.8rem);
   line-height: 1.1;
@@ -776,7 +749,6 @@ a { text-decoration: none; color: inherit; }
 <section class="career-hero">
   <div class="container">
     <div class="career-hero-inner">
-      <div class="hero-badge">Now Hiring</div>
       <h1>Build Your <span class="accent">Career</span> With ADI Architectural Door Inc.</h1>
       <p>We are building a team of professionals who want more than just a job — they want ownership of their income and impact. Join a fast-growing company where opportunity meets performance.</p>
       <a href="#apply" class="btn btn-primary">

@@ -226,10 +226,6 @@ a { text-decoration: none; color: inherit; }
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
 .hero h1 {
   font-size: clamp(2.8rem, 5vw, 4.2rem);
   line-height: 1.05;
@@ -491,21 +487,6 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
   margin-bottom: 24px;
 }
-.service-card-featured .service-badge {
-  display: inline-block;
-  background: rgba(196,30,42,0.15);
-  border: 1px solid rgba(196,30,42,0.3);
-  color: var(--red-light);
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  margin-bottom: 16px;
-  width: fit-content;
-}
-
 /* ──── ABOUT SPLIT ──── */
 .about-split {
   display: grid;
@@ -1347,7 +1328,6 @@ a.location-detail:hover { color: #fff; }
           </div>
         </div>
         <div class="service-body">
-          <span class="service-badge">Specialty Solutions</span>
           <h3>Hotels & Multi-Family Solutions</h3>
           <p>Purpose-built door, hardware, and security packages for hospitality and multi-family residential properties. From guest room lock systems and common-area access control to fire-rated corridor assemblies and ADA-compliant entries, we deliver coordinated solutions designed for high-occupancy environments — covering everything from boutique hotels to large-scale apartment communities.</p>
           <span class="service-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span>
