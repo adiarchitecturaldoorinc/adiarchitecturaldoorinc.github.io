@@ -12,12 +12,12 @@
 <meta property="og:title" content="Door Budgeting & Project Management | ADI Architectural Door Inc.">
 <meta property="og:description" content="Accurate commercial door and hardware budgeting, estimating, and project management — from blueprints to delivery. Serving contractors across New York.">
 <meta property="og:url" content="https://adiarchitecturaldoorinc.github.io/services/budgeting.html">
-<meta property="og:image" content="https://adiarchitecturaldoorinc.github.io/images/adiLogo.svg">
+<meta property="og:image" content="https://adiarchitecturaldoorinc.github.io/images/adi-logo-original.jpg">
 <meta property="og:site_name" content="ADI Architectural Door Inc.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Door Budgeting & Project Management | ADI Architectural Door Inc.">
 <meta name="twitter:description" content="Commercial door and hardware estimating and project management services for GCs and developers. Accurate bids from ADI Architectural Door Inc.">
-<meta name="twitter:image" content="https://adiarchitecturaldoorinc.github.io/images/adiLogo.svg">
+<meta name="twitter:image" content="https://adiarchitecturaldoorinc.github.io/images/adi-logo-original.jpg">
 <title>Budgeting & Project Management | ADI Architectural Door Inc.</title>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -62,7 +62,11 @@ a { text-decoration: none; color: inherit; }
 }
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
 .logo { display: flex; align-items: center; gap: 14px; padding: 10px 0; }
-.logo img { height: 60px; }
+.logo img { height: 60px; width: 60px; }
+.logo-text { line-height: 1.1; }
+.logo-text strong { display: block; font-family: 'Oswald', sans-serif; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.1em; color: #fff; }
+.logo-text span { display: block; font-size: 0.64rem; letter-spacing: 0.2em; color: #d8cfc5; font-weight: 600; text-transform: uppercase; }
+@media (max-width: 480px) { .logo img { height: 48px; width: 48px; } .logo-text strong { font-size: 1.15rem; } .logo-text span { font-size: 0.56rem; letter-spacing: 0.14em; } }
 .nav-links { display: flex; gap: 0; align-items: center; }
 .nav-links a {
   padding: 22px 18px;
@@ -373,7 +377,8 @@ a { text-decoration: none; color: inherit; }
 <nav class="navbar">
   <div class="container">
     <a href="../index.html" class="logo">
-      <img src="../images/mainImage.png" alt="ADI Architectural Door Inc." />
+      <img src="../images/adi-logo-small.png" alt="" />
+      <div class="logo-text"><strong>ADI</strong><span>Architectural Door Inc.</span></div>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="../index.html">Home</a>

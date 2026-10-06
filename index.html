@@ -12,12 +12,12 @@
 <meta property="og:title" content="ADI Architectural Door Inc. | Commercial Door Solutions">
 <meta property="og:description" content="ADI Architectural Door Inc. supplies commercial steel doors, hollow metal frames, fire-rated doors, and door hardware in New York, NY. Licensed installers, 500+ products.">
 <meta property="og:url" content="https://adiarchitecturaldoorinc.github.io/">
-<meta property="og:image" content="https://adiarchitecturaldoorinc.github.io/images/adiLogo.svg">
+<meta property="og:image" content="https://adiarchitecturaldoorinc.github.io/images/adi-logo-original.jpg">
 <meta property="og:site_name" content="ADI Architectural Door Inc.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ADI Architectural Door Inc. | Commercial Door Solutions">
 <meta name="twitter:description" content="Commercial door supplier offering steel doors, fire-rated assemblies, door hardware, access control, and installation across New York City.">
-<meta name="twitter:image" content="https://adiarchitecturaldoorinc.github.io/images/adiLogo.svg">
+<meta name="twitter:image" content="https://adiarchitecturaldoorinc.github.io/images/adi-logo-original.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,8 +25,8 @@
   "name": "ADI Architectural Door Inc.",
   "description": "Commercial door and hardware supplier offering steel doors, hollow metal frames, fire-rated doors, locksets, closers, exit devices, access control systems, and professional installation services.",
   "url": "https://adiarchitecturaldoorinc.github.io",
-  "logo": "https://adiarchitecturaldoorinc.github.io/images/adiLogo.svg",
-  "image": "https://adiarchitecturaldoorinc.github.io/images/adiLogo.svg",
+  "logo": "https://adiarchitecturaldoorinc.github.io/images/adi-logo-original.jpg",
+  "image": "https://adiarchitecturaldoorinc.github.io/images/adi-logo-original.jpg",
   "telephone": "(754) 444-1181",
   "email": "adiarchitecturaldoorinc@gmail.com",
   "address": [
@@ -55,9 +55,9 @@
 }
 </script>
 <title>ADI Architectural Door Inc. | Commercial Door Solutions</title>
-<link rel="icon" type="image/jpeg" href="images/adiLogo.svg">
-<link rel="shortcut icon" type="image/jpeg" href="images/adiLogo.svg">
-<link rel="apple-touch-icon" href="images/adiLogo.svg">
+<link rel="icon" type="image/png" href="images/adi-icon.png">
+<link rel="shortcut icon" type="image/png" href="images/adi-icon.png">
+<link rel="apple-touch-icon" href="images/adi-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -113,10 +113,11 @@ a { text-decoration: none; color: inherit; }
   padding-bottom: 0;
 }
 .logo { display: flex; align-items: center; gap: 14px; padding: 10px 0; }
-.logo img { height: 60px; }
+.logo img { height: 60px; width: 60px; }
 .logo-text { line-height: 1.1; }
-.logo-text h2 { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.08em; color: #fff; }
-.logo-text span { font-size: 0.7rem; letter-spacing: 0.22em; color: var(--red); font-weight: 600; }
+.logo-text strong { display: block; font-family: 'Oswald', sans-serif; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.1em; color: #fff; }
+.logo-text span { display: block; font-size: 0.64rem; letter-spacing: 0.2em; color: #d8cfc5; font-weight: 600; text-transform: uppercase; }
+@media (max-width: 480px) { .logo img { height: 48px; width: 48px; } .logo-text strong { font-size: 1.15rem; } .logo-text span { font-size: 0.56rem; letter-spacing: 0.14em; } }
 
 .nav-links { display: flex; gap: 0; align-items: center; }
 .nav-links a {
@@ -213,9 +214,13 @@ a { text-decoration: none; color: inherit; }
   animation: fadeInRight 1s 0.3s both;
 }
 .hero-logo-showcase img {
-  width: 420px;
-  height: auto;
-  filter: drop-shadow(0 20px 80px rgba(196,30,42,0.3));
+  height: min(72vh, 640px);
+  width: auto;
+  max-width: 100%;
+  /* black-on-white drawing shown as light lines on the dark hero */
+  filter: invert(1) brightness(0.9);
+  mix-blend-mode: screen;
+  opacity: 0.92;
   position: relative;
   z-index: 2;
 }
@@ -1082,7 +1087,7 @@ a.location-detail:hover { color: #fff; }
   .service-card-featured { grid-template-columns: 1fr 1fr; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-logo-showcase img { width: 320px; }
+  .hero-logo-showcase img { height: min(64vh, 540px); }
   .mission-values { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 768px) {
@@ -1102,7 +1107,7 @@ a.location-detail:hover { color: #fff; }
   .hero { min-height: 75vh; }
   .hero h1 { font-size: 2.4rem; }
   .hero-inner { flex-direction: column-reverse; text-align: center; gap: 40px; }
-  .hero-logo-showcase img { width: 240px; }
+  .hero-logo-showcase img { height: 340px; }
   .hero-btns { justify-content: center; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .stat-item:not(:last-child)::after { display: none; }
@@ -1151,7 +1156,8 @@ a.location-detail:hover { color: #fff; }
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="#" class="logo">
-      <img src="images/adiLogo.svg" alt="ADI Architectural Door Inc." />
+      <img src="images/adi-logo-small.png" alt="" />
+      <div class="logo-text"><strong>ADI</strong><span>Architectural Door Inc.</span></div>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#home">Home</a>
@@ -1195,9 +1201,9 @@ a.location-detail:hover { color: #fff; }
           </a>
         </div>
       </div>
-      <!-- BIG LOGO IN HERO -->
+      <!-- HERO DRAWING -->
       <div class="hero-logo-showcase">
-        <img src="images/adiLogo.svg" alt="ADI Architectural Door Inc. Logo" />
+        <img src="images/hero-elevation.webp" alt="Architectural elevation drawing of a high-rise building" width="818" height="1654" />
       </div>
     </div>
   </div>
@@ -1648,7 +1654,7 @@ a.location-detail:hover { color: #fff; }
         <div class="footer-brand">
           <a href="#" class="logo">
            <div style="text-align: center;">
-            <img src="images/adiLogo.svg" alt="ADI Architectural Door Inc." style="height:60px;">
+            <img src="images/adi-logo-small.png" alt="ADI Architectural Door Inc." style="height:88px;width:88px;">
            </div>
           </a>
           <p>Your trusted partner for commercial door solutions. We combine quality products, expert knowledge, and exceptional service to secure what matters most.</p>
