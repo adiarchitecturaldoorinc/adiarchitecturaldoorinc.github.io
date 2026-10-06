@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 196" role="img" aria-label="ADI Architectural Door Inc.">
+  <title>ADI Architectural Door Inc.</title>
+  <!-- door mark -->
+  <rect x="110" y="8" width="60" height="92" fill="none" stroke="#c41e2a" stroke-width="6"/>
+  <polygon points="113,11 152,19 152,93 113,97" fill="#f2f2f2"/>
+  <circle cx="145" cy="57" r="3.2" fill="#c41e2a"/>
+  <!-- ADI lettering -->
+  <g fill="#ffffff" fill-rule="evenodd">
+    <path d="M75 160 L95 112 H105 L125 160 H113 L109 150 H91 L87 160 Z M95.75 139 H104.25 L100 128.8 Z"/>
+    <path d="M137 112 H160 A21 24 0 0 1 160 160 H137 Z M149 123 H159 A11 13 0 0 1 159 149 H149 Z"/>
+    <rect x="193" y="112" width="12" height="48"/>
+  </g>
+  <rect x="75" y="168" width="130" height="3" fill="#c41e2a"/>
+  <text x="140" y="189" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="11" letter-spacing="2">ARCHITECTURAL DOOR INC.</text>
+</svg>
