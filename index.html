@@ -162,6 +162,21 @@ a { text-decoration: none; color: inherit; }
 /* ──── CONTAINER ──── */
 .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
+/* ──── HOME PROJECTS ──── */
+.home-projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.home-project { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--black-card); }
+.home-project img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.home-project::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.15) 55%, transparent 100%); }
+.home-project-label { position: absolute; left: 18px; right: 18px; bottom: 16px; z-index: 1; }
+.home-project-label strong { display: block; font-family: 'Oswald', sans-serif; font-size: 1.15rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; line-height: 1.2; }
+.home-project-label span { display: block; margin-top: 4px; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-light); }
+.home-project:hover img { transform: scale(1.05); }
+.home-project:focus-visible { outline: 2px solid var(--red-light); outline-offset: 3px; }
+.home-projects-more { text-align: center; margin-top: 40px; }
+@media (max-width: 900px) { .home-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .home-projects { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .home-project img { transition: none; } .home-project:hover img { transform: none; } }
+
 /* ──── HERO ──── */
 .hero {
   position: relative;
@@ -1156,6 +1171,7 @@ a.location-detail:hover { color: #fff; }
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
+      <a href="projects.html">Projects</a>
       <a href="#locations">Contact</a>
       <a href="#contact" class="nav-cta">Contact Us</a>
     </div>
@@ -1459,6 +1475,47 @@ a.location-detail:hover { color: #fff; }
         <h3>Value for Every Budget</h3>
         <p>Competitive pricing without compromising quality — solutions for every budget tier.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section section-dark" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Work</div>
+      <h2>Featured Projects</h2>
+    </div>
+    <div class="home-projects">
+      <a href="projects.html#broome" class="home-project">
+        <img src="images/projects/broome-1.webp" alt="570 Broome Street" width="800" height="400" loading="lazy" decoding="async">
+        <span class="home-project-label"><strong>570 Broome Street</strong><span>SoHo, Manhattan</span></span>
+      </a>
+      <a href="projects.html#ninth" class="home-project">
+        <img src="images/projects/ninth-1.webp" alt="50 Ninth Avenue" width="1500" height="1125" loading="lazy" decoding="async">
+        <span class="home-project-label"><strong>50 Ninth Avenue</strong><span>Chelsea, Manhattan</span></span>
+      </a>
+      <a href="projects.html#holidayinn" class="home-project">
+        <img src="images/projects/holidayinn-1.jpg" alt="Holiday Inn Downtown Brooklyn" width="940" height="628" loading="lazy" decoding="async">
+        <span class="home-project-label"><strong>Holiday Inn Downtown Brooklyn</strong><span>Downtown Brooklyn</span></span>
+      </a>
+      <a href="projects.html#vanwagenen" class="home-project">
+        <img src="images/projects/vanwagenen-1.jpg" alt="161 Van Wagenen Avenue" width="1600" height="1065" loading="lazy" decoding="async">
+        <span class="home-project-label"><strong>161 Van Wagenen Avenue</strong><span>Jersey City, New Jersey</span></span>
+      </a>
+      <a href="projects.html#palmetto" class="home-project">
+        <img src="images/projects/palmetto-1.jpg" alt="8 Palmetto Street" width="1600" height="1150" loading="lazy" decoding="async">
+        <span class="home-project-label"><strong>8 Palmetto Street</strong><span>Brooklyn</span></span>
+      </a>
+      <a href="projects.html#riverview" class="home-project">
+        <img src="images/projects/hospital-1.jpg" alt="Riverview Medical Center" width="1600" height="1178" loading="lazy" decoding="async">
+        <span class="home-project-label"><strong>Riverview Medical Center</strong></span>
+      </a>
+    </div>
+    <div class="home-projects-more">
+      <a href="projects.html" class="btn btn-primary">View All Projects
+        <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>

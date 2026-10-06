@@ -95,20 +95,15 @@ a { text-decoration: none; color: inherit; }
 .projects-intro h1 span { color: var(--red); }
 .projects-intro p { color: var(--gray-light); font-size: 1.08rem; line-height: 1.7; max-width: 640px; margin: 0 auto; }
 .projects-list { padding: 40px 0 40px; }
-.project {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 48px; align-items: start;
-  padding: 56px 0; border-top: 1px solid rgba(255,255,255,0.07);
-}
+.project { padding: 48px 0; border-top: 1px solid rgba(255,255,255,0.07); }
 .project:first-child { border-top: 0; }
-.project-info { position: sticky; top: 110px; }
+.project-info { margin-bottom: 20px; }
 .project-info h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; color: #fff; line-height: 1.15; }
-.project-place { color: var(--red-light); font-family: 'Oswald', sans-serif; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; margin: 10px 0 18px; line-height: 1.6; }
-.project-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-.project-facts li { font-size: 0.8rem; color: var(--white); background: var(--black-light); border-left: 2px solid var(--red); padding: 6px 12px; }
-.project-info p { color: var(--gray-light); font-size: 0.97rem; line-height: 1.8; }
+.project-place { color: var(--red-light); font-family: 'Oswald', sans-serif; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; margin: 8px 0 0; line-height: 1.6; }
 .project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.project-gallery.count-1 { grid-template-columns: 1fr; }
-.project-gallery.count-3 .project-photo:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.project-gallery.count-1 { grid-template-columns: minmax(0, 900px); }
+.project-gallery.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.project-gallery.count-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .project-photo {
   display: block; padding: 0; border: 0; cursor: zoom-in; background: var(--black-card);
   aspect-ratio: 4 / 3; overflow: hidden; position: relative;
@@ -134,8 +129,8 @@ a { text-decoration: none; color: inherit; }
 .lb-nav { top: 50%; transform: translateY(-50%); font-size: 3.6rem; padding: 10px; }
 .lb-prev { left: 10px; } .lb-next { right: 10px; }
 @media (max-width: 900px) {
-  .project { grid-template-columns: 1fr; gap: 24px; padding: 44px 0; }
-  .project-info { position: static; }
+  .project { padding: 40px 0; }
+  .project-gallery.count-3, .project-gallery.count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 520px) {
   .project-gallery { gap: 8px; }
@@ -203,6 +198,7 @@ a { text-decoration: none; color: inherit; }
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#about">About</a>
+      <a href="projects.html">Projects</a>
       <a href="index.html#locations">Contact</a>
       <a href="index.html#contact" class="nav-cta">Contact Us</a>
     </div>
@@ -225,8 +221,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>570 Broome Street</h2>
         <div class="project-place">SoHo, Manhattan</div>
-        <ul class="project-facts"><li>27-story luxury condominium</li><li>Full Division 8 supply</li></ul>
-        <p>Retained by the developer during preconstruction to work with the project’s international architect on the door and hardware design. Awarded the full Division 8 supply as low bidder: custom wood doors, hollow metal, and value-engineered Italian hardware.</p>
       </div>
       <div class="project-gallery count-3">
           <button type="button" class="project-photo" data-full="images/projects/broome-1.webp" data-caption="570 Broome Street, glass tower facade overlooking the Hudson" aria-label="View larger: 570 Broome Street, glass tower facade overlooking the Hudson">
@@ -245,8 +239,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>50 Ninth Avenue</h2>
         <div class="project-place">Chelsea, Manhattan</div>
-        <ul class="project-facts"><li>Historic restoration + new build</li><li>Complete Division 8 package</li></ul>
-        <p>Nine restored 1840s brick townhomes integrated with a new 9-story office building in the Meatpacking District. ADI value-engineered and upgraded the hardware design and supplied the complete Division 8 package.</p>
       </div>
       <div class="project-gallery count-2">
           <button type="button" class="project-photo" data-full="images/projects/ninth-1.webp" data-caption="50 Ninth Avenue under construction above the Meatpacking District plaza" aria-label="View larger: 50 Ninth Avenue under construction above the Meatpacking District plaza">
@@ -262,8 +254,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>Le Soleil Hotel</h2>
         <div class="project-place">Fifth Avenue / W. 36th Street, Manhattan</div>
-        <ul class="project-facts"><li>25-story, 170-suite hotel</li><li>Preconstruction to completion</li></ul>
-        <p>Involved from preconstruction through the completed Division 8 supply for this 25-story, 170-suite hotel in Midtown.</p>
       </div>
       <div class="project-gallery count-1">
           <button type="button" class="project-photo" data-full="images/projects/lesoleil-1.webp" data-caption="Le Soleil Hotel from construction through completion" aria-label="View larger: Le Soleil Hotel from construction through completion">
@@ -276,8 +266,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>Holiday Inn Downtown Brooklyn</h2>
         <div class="project-place">Downtown Brooklyn</div>
-        <ul class="project-facts"><li>250-room hotel</li><li>Complete Division 8 package</li></ul>
-        <p>Ground-up construction of a 250-room hotel. ADI supplied the complete Division 8 door and hardware package.</p>
       </div>
       <div class="project-gallery count-1">
           <button type="button" class="project-photo" data-full="images/projects/holidayinn-1.jpg" data-caption="Holiday Inn Downtown Brooklyn, completed hotel" aria-label="View larger: Holiday Inn Downtown Brooklyn, completed hotel">
@@ -290,8 +278,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>161 Van Wagenen Avenue</h2>
         <div class="project-place">Jersey City, New Jersey</div>
-        <ul class="project-facts"><li>140 residences</li><li>1,700 openings supplied</li></ul>
-        <p>Ground-up new construction of a 140-residence building. ADI supplied 1,700 door and hardware openings.</p>
       </div>
       <div class="project-gallery count-4">
           <button type="button" class="project-photo" data-full="images/projects/vanwagenen-1.jpg" data-caption="161 Van Wagenen Avenue, completed building" aria-label="View larger: 161 Van Wagenen Avenue, completed building">
@@ -313,8 +299,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>8 Palmetto Street</h2>
         <div class="project-place">Brooklyn</div>
-        <ul class="project-facts"><li>140 residences</li><li>1,400 openings supplied</li></ul>
-        <p>Ground-up new construction of a 140-residence building. ADI supplied 1,400 door and hardware openings.</p>
       </div>
       <div class="project-gallery count-2">
           <button type="button" class="project-photo" data-full="images/projects/palmetto-1.jpg" data-caption="8 Palmetto Street, completed building" aria-label="View larger: 8 Palmetto Street, completed building">
@@ -330,8 +314,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>601 Baltic Street</h2>
         <div class="project-place">Brooklyn</div>
-        <ul class="project-facts"><li>25 luxury condominiums</li><li>Complete door &amp; hardware package</li></ul>
-        <p>Ground-up construction of 25 luxury condominiums. ADI supplied the complete door and hardware package.</p>
       </div>
       <div class="project-gallery count-4">
           <button type="button" class="project-photo" data-full="images/projects/baltic-1.webp" data-caption="601 Baltic Street, completed brick facade" aria-label="View larger: 601 Baltic Street, completed brick facade">
@@ -353,8 +335,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>350 Butler Street</h2>
         <div class="project-place">Brooklyn</div>
-        <ul class="project-facts"><li>35 luxury condominiums</li><li>Complete door &amp; hardware package</li></ul>
-        <p>Ground-up construction of 35 luxury condominiums. ADI supplied the complete door and hardware package, including frame details engineered for the masonry openings.</p>
       </div>
       <div class="project-gallery count-2">
           <button type="button" class="project-photo" data-full="images/projects/butler-1.webp" data-caption="Finished residence door and frame" aria-label="View larger: Finished residence door and frame">
@@ -370,8 +350,6 @@ a { text-decoration: none; color: inherit; }
       <div class="project-info">
         <h2>311-319 State Street &amp; 390 State Street</h2>
         <div class="project-place">Boerum Hill, Brooklyn</div>
-        <ul class="project-facts"><li>Ultra-luxury townhomes</li><li>Custom hardware supplied</li></ul>
-        <p>Newly constructed ultra-luxury townhomes. ADI supplied complete specified door schedules with custom hardware.</p>
       </div>
       <div class="project-gallery count-1">
           <button type="button" class="project-photo" data-full="images/projects/statestreet-1.jpg" data-caption="State Street townhomes in Boerum Hill during construction" aria-label="View larger: State Street townhomes in Boerum Hill during construction">
@@ -380,12 +358,9 @@ a { text-decoration: none; color: inherit; }
       </div>
     </article>
 
-    <article class="project" id="healthcare">
+    <article class="project" id="riverview">
       <div class="project-info">
-        <h2>Hospitals &amp; Healthcare</h2>
-        <div class="project-place">Riverview Medical Center · NYU Langone · Mount Sinai · NewYork-Presbyterian</div>
-        <ul class="project-facts"><li>Recurring hospital contracts</li><li>New York &amp; New Jersey</li></ul>
-        <p>Recurring specialized door and hardware contracts covering oncology and surgical areas, lead-lined imaging rooms, electrified life-safety hardware, and complete multi-patient floors.</p>
+        <h2>Riverview Medical Center</h2>
       </div>
       <div class="project-gallery count-3">
           <button type="button" class="project-photo" data-full="images/projects/hospital-1.jpg" data-caption="Riverview Medical Center nurse station and patient corridor" aria-label="View larger: Riverview Medical Center nurse station and patient corridor">
@@ -499,8 +474,7 @@ document.getElementById('mobileToggle').addEventListener('click', () => { docume
     var b = items[idx];
     img.src = b.getAttribute('data-full');
     img.alt = b.getAttribute('data-caption');
-    var name = b.closest('.project').querySelector('h2').textContent, c = b.getAttribute('data-caption');
-    cap.textContent = c.indexOf(name) === 0 ? c : name + ' \u2014 ' + c;
+    cap.textContent = b.closest('.project').querySelector('h2').textContent;
   }
   function open(i) { lastFocus = document.activeElement; show(i); box.hidden = false; document.body.style.overflow = 'hidden'; box.querySelector('.lb-close').focus(); }
   function close() { box.hidden = true; img.src = ''; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
