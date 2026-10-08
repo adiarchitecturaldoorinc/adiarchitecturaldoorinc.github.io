@@ -107,6 +107,11 @@ a { text-decoration: none; color: inherit; }
 .project-gallery.count-1 { grid-template-columns: minmax(0, 900px); }
 .project-gallery.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .project-gallery.count-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+/* per-project sizing requested by client */
+.project-gallery.size-small { max-width: 620px; }
+.project-gallery.count-3.size-large { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.project-gallery.count-3.size-large .project-photo:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.project-gallery.count-4.size-large { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .project-photo {
   display: block; padding: 0; border: 0; cursor: zoom-in; background: var(--black-card);
   aspect-ratio: 4 / 3; overflow: hidden; position: relative;
@@ -225,7 +230,7 @@ a { text-decoration: none; color: inherit; }
         <h2>570 Broome Street</h2>
         <div class="project-place">SoHo, Manhattan</div>
       </div>
-      <div class="project-gallery count-3">
+      <div class="project-gallery count-3 size-large">
           <button type="button" class="project-photo" data-full="images/projects/broome-1.webp" data-caption="570 Broome Street, glass tower facade overlooking the Hudson" aria-label="View larger: 570 Broome Street, glass tower facade overlooking the Hudson">
             <img src="images/projects/broome-1.webp" alt="570 Broome Street, glass tower facade overlooking the Hudson" width="800" height="400" loading="lazy" decoding="async">
           </button>
@@ -282,7 +287,7 @@ a { text-decoration: none; color: inherit; }
         <h2>161 Van Wagenen Avenue</h2>
         <div class="project-place">Jersey City, New Jersey</div>
       </div>
-      <div class="project-gallery count-4">
+      <div class="project-gallery count-4 size-large">
           <button type="button" class="project-photo" data-full="images/projects/vanwagenen-1.jpg" data-caption="161 Van Wagenen Avenue, completed building" aria-label="View larger: 161 Van Wagenen Avenue, completed building">
             <img src="images/projects/vanwagenen-1.jpg" alt="161 Van Wagenen Avenue, completed building" width="1600" height="1065" loading="lazy" decoding="async">
           </button>
@@ -303,7 +308,7 @@ a { text-decoration: none; color: inherit; }
         <h2>8 Palmetto Street</h2>
         <div class="project-place">Brooklyn</div>
       </div>
-      <div class="project-gallery count-2">
+      <div class="project-gallery count-2 size-small">
           <button type="button" class="project-photo" data-full="images/projects/palmetto-1.jpg" data-caption="8 Palmetto Street, completed building" aria-label="View larger: 8 Palmetto Street, completed building">
             <img src="images/projects/palmetto-1.jpg" alt="8 Palmetto Street, completed building" width="1600" height="1150" loading="lazy" decoding="async">
           </button>
@@ -339,7 +344,7 @@ a { text-decoration: none; color: inherit; }
         <h2>350 Butler Street</h2>
         <div class="project-place">Brooklyn</div>
       </div>
-      <div class="project-gallery count-2">
+      <div class="project-gallery count-2 size-small">
           <button type="button" class="project-photo" data-full="images/projects/butler-1.webp" data-caption="Finished residence door and frame" aria-label="View larger: Finished residence door and frame">
             <img src="images/projects/butler-1.webp" alt="Finished residence door and frame" width="1500" height="2000" loading="lazy" decoding="async">
           </button>
