@@ -115,11 +115,13 @@ a { text-decoration: none; color: inherit; }
 .project-gallery.count-3.size-small { max-width: 780px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .project-gallery.portrait .project-photo { aspect-ratio: 3 / 4; }
 .project-photo.is-full img { object-fit: contain; }
+.project-gallery.count-1.size-small { max-width: 560px; grid-template-columns: 1fr; }
 @media (max-width: 900px) {
   /* phones and tablets: keep the client's larger / smaller choices visible */
   .project-gallery.count-4.size-large { grid-template-columns: 1fr; }
   .project-gallery.size-small { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
   .project-gallery.count-3.size-small { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .project-gallery.count-1.size-small { grid-template-columns: 1fr; max-width: 75%; }
 }
 .project-photo {
   display: block; padding: 0; border: 0; cursor: zoom-in; background: var(--black-card);
@@ -287,7 +289,7 @@ a { text-decoration: none; color: inherit; }
         <h2>Holiday Inn Downtown Brooklyn</h2>
         <div class="project-place">Downtown Brooklyn</div>
       </div>
-      <div class="project-gallery count-1">
+      <div class="project-gallery count-1 size-small">
           <button type="button" class="project-photo" data-full="images/projects/holidayinn-1.jpg" data-caption="Holiday Inn Downtown Brooklyn, completed hotel" aria-label="View larger: Holiday Inn Downtown Brooklyn, completed hotel">
             <img src="images/projects/holidayinn-1.jpg" alt="Holiday Inn Downtown Brooklyn, completed hotel" width="940" height="628" loading="lazy" decoding="async">
           </button>
