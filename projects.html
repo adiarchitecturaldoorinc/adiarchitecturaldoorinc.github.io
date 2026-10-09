@@ -112,10 +112,14 @@ a { text-decoration: none; color: inherit; }
 .project-gallery.count-3.size-large { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .project-gallery.count-3.size-large .project-photo:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
 .project-gallery.count-4.size-large { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.project-gallery.count-3.size-small { max-width: 780px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.project-gallery.portrait .project-photo { aspect-ratio: 3 / 4; }
+.project-photo.is-full img { object-fit: contain; }
 @media (max-width: 900px) {
   /* phones and tablets: keep the client's larger / smaller choices visible */
   .project-gallery.count-4.size-large { grid-template-columns: 1fr; }
   .project-gallery.size-small { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
+  .project-gallery.count-3.size-small { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .project-photo {
   display: block; padding: 0; border: 0; cursor: zoom-in; background: var(--black-card);
@@ -235,9 +239,12 @@ a { text-decoration: none; color: inherit; }
         <h2>570 Broome Street</h2>
         <div class="project-place">SoHo, Manhattan</div>
       </div>
-      <div class="project-gallery count-3 size-large">
+      <div class="project-gallery count-4 size-large">
           <button type="button" class="project-photo" data-full="images/projects/broome-1.webp" data-caption="570 Broome Street, glass tower facade overlooking the Hudson" aria-label="View larger: 570 Broome Street, glass tower facade overlooking the Hudson">
             <img src="images/projects/broome-1.webp" alt="570 Broome Street, glass tower facade overlooking the Hudson" width="800" height="400" loading="lazy" decoding="async">
+          </button>
+          <button type="button" class="project-photo" data-full="images/projects/broome-lobby.jpg" data-caption="570 Broome Street lobby entrance" aria-label="View larger: 570 Broome Street lobby entrance">
+            <img src="images/projects/broome-lobby.jpg" alt="570 Broome Street lobby entrance" width="1200" height="800" loading="lazy" decoding="async">
           </button>
           <button type="button" class="project-photo" data-full="images/projects/broome-2.webp" data-caption="Residence interior with floor-to-ceiling windows" aria-label="View larger: Residence interior with floor-to-ceiling windows">
             <img src="images/projects/broome-2.webp" alt="Residence interior with floor-to-ceiling windows" width="795" height="924" loading="lazy" decoding="async">
@@ -349,12 +356,15 @@ a { text-decoration: none; color: inherit; }
         <h2>350 Butler Street</h2>
         <div class="project-place">Brooklyn</div>
       </div>
-      <div class="project-gallery count-2 size-small">
+      <div class="project-gallery count-3 size-small portrait">
           <button type="button" class="project-photo" data-full="images/projects/butler-1.webp" data-caption="Finished residence door and frame" aria-label="View larger: Finished residence door and frame">
             <img src="images/projects/butler-1.webp" alt="Finished residence door and frame" width="1500" height="2000" loading="lazy" decoding="async">
           </button>
           <button type="button" class="project-photo is-doc" data-full="images/projects/butler-2.webp" data-caption="Frame head and jamb detail: ADI implemented a 6¾&quot; throat for punch-and-dimple bolted masonry frames" aria-label="View larger: Frame head and jamb detail: ADI implemented a 6¾&quot; throat for punch-and-dimple bolted masonry frames">
             <img src="images/projects/butler-2.webp" alt="Frame head and jamb detail: ADI implemented a 6¾&quot; throat for punch-and-dimple bolted masonry frames" width="398" height="343" loading="lazy" decoding="async">
+          </button>
+          <button type="button" class="project-photo is-full" data-full="images/projects/hospital-2.webp" data-caption="White doors with protective cardboard, stacks of doors behind" aria-label="View larger: White doors with protective cardboard, stacks of doors behind">
+            <img src="images/projects/hospital-2.webp" alt="White doors with protective cardboard, stacks of doors behind" width="1500" height="2000" loading="lazy" decoding="async">
           </button>
       </div>
     </article>
@@ -364,7 +374,10 @@ a { text-decoration: none; color: inherit; }
         <h2>311-319 State Street &amp; 390 State Street</h2>
         <div class="project-place">Boerum Hill, Brooklyn</div>
       </div>
-      <div class="project-gallery count-1">
+      <div class="project-gallery count-2">
+          <button type="button" class="project-photo" data-full="images/projects/statestreet-rendering.jpg" data-caption="Rendering of the completed State Street townhomes" aria-label="View larger: Rendering of the completed State Street townhomes">
+            <img src="images/projects/statestreet-rendering.jpg" alt="Rendering of the completed State Street townhomes" width="1500" height="800" loading="lazy" decoding="async">
+          </button>
           <button type="button" class="project-photo" data-full="images/projects/statestreet-1.jpg" data-caption="State Street townhomes in Boerum Hill during construction" aria-label="View larger: State Street townhomes in Boerum Hill during construction">
             <img src="images/projects/statestreet-1.jpg" alt="State Street townhomes in Boerum Hill during construction" width="1600" height="1079" loading="lazy" decoding="async">
           </button>
@@ -379,8 +392,8 @@ a { text-decoration: none; color: inherit; }
           <button type="button" class="project-photo" data-full="images/projects/hospital-1.jpg" data-caption="Riverview Medical Center nurse station and patient corridor" aria-label="View larger: Riverview Medical Center nurse station and patient corridor">
             <img src="images/projects/hospital-1.jpg" alt="Riverview Medical Center nurse station and patient corridor" width="1600" height="1178" loading="lazy" decoding="async">
           </button>
-          <button type="button" class="project-photo" data-full="images/projects/hospital-2.webp" data-caption="Factory-wrapped doors staged for delivery" aria-label="View larger: Factory-wrapped doors staged for delivery">
-            <img src="images/projects/hospital-2.webp" alt="Factory-wrapped doors staged for delivery" width="1500" height="2000" loading="lazy" decoding="async">
+          <button type="button" class="project-photo" data-full="images/projects/riverview-oak.webp" data-caption="Stained oak doors staged on the floor" aria-label="View larger: Stained oak doors staged on the floor">
+            <img src="images/projects/riverview-oak.webp" alt="Stained oak doors staged on the floor" width="1500" height="1430" loading="lazy" decoding="async">
           </button>
           <button type="button" class="project-photo is-doc" data-full="images/projects/hospital-3.webp" data-caption="Door schedule for a patient floor" aria-label="View larger: Door schedule for a patient floor">
             <img src="images/projects/hospital-3.webp" alt="Door schedule for a patient floor" width="630" height="542" loading="lazy" decoding="async">
